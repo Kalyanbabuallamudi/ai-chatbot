@@ -1,0 +1,26 @@
+# Ignore Google Cloud credentials
+*.json
+# Or specify your credentials file by name
+C:/Text-Speech/inner-orb-430612-j9-92651abf1142.json
+
+# Ignore .env files where sensitive environment variables might be stored
+.env
+
+# Ignore Python bytecode files
+*.py[cod]
+
+# Ignore any hidden system files
+.DS_Store
+Thumbs.db
+
+# Ignore virtual environment directories
+venv/
+env/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore cache files
+__pycache__/
+.cache/

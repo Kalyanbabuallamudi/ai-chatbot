@@ -1,0 +1,186 @@
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, rgba(8, 234, 79, 0.868), rgba(253, 160, 133, 0.5), rgba(135, 206, 250, 0.5), rgba(255, 182, 193, 0.5));
+    background-size: 200% 200%;
+    animation: backgroundShift 10s ease infinite;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure footer stays at the bottom */
+}
+
+/* Background Animation */
+@keyframes backgroundShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Container Styles */
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    margin: 1rem auto; /* Center the container */
+    animation: fadeInUp 1s ease-in-out;
+    overflow: hidden;
+    flex: 1; /* Allow the container to grow */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+select {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.5); /* More transparent background */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+select:focus {
+    border: 2px solid rgba(255, 127, 80, 0.7); /* Transparent focus border */
+    box-shadow: 0 0 10px rgba(255, 127, 80, 0.5);
+}
+
+/* Button Styles */
+button {
+    background-color: rgba(255, 127, 80, 0.8); /* Semi-transparent coral */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: rgba(255, 99, 71, 0.9); /* More transparent tomato */
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 127, 80, 0.5);
+}
+
+/* Chat History */
+#chat-history {
+    height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgba(241, 241, 241, 0.8); /* Slightly transparent background */
+    padding: 15px;
+    border: 1px solid rgba(221, 221, 221, 0.5);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column-reverse; /* Latest message appears on top */
+}
+
+/* Message Bubbles */
+.message {
+    background-color: rgba(255, 127, 80, 0.9); /* Semi-transparent coral */
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    animation: fadeIn 0.5s ease;
+}
+
+.message.bot {
+    background-color: rgba(241, 241, 241, 0.9); /* More transparent light grey */
+    color: #333;
+    text-align: left;
+    margin-left: auto;
+}
+
+/* Hover Effect on Message Bubbles */
+.message:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(255, 127, 80, 0.3);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    color: #666;
+    font-size: 0.9rem;
+    position: relative; /* Ensure the footer is at the bottom */
+    background: rgba(255, 255, 255, 0.8); /* Add a slight background color */
+}
+
+footer i {
+    color: red;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
