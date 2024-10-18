@@ -1,5 +1,5 @@
 reference_data = {
-    "9622": {
+    "3757": {
         "lab_result": "Blood test normal, WBC: 6,200 (Normal: 4,500-10,000),Platelets: 320K (Normal: 140K-450K),RBC: 5.5M (Normal: 5-6M)",
         "prescription": "Take Paracetamol, one tablet every 8 hours, for 5 days. Stay safe and take care!",
         "billing": "Your Total Expenses is : $120."
@@ -36,16 +36,24 @@ def get_lab_result(reference_number):
     data = reference_data.get(reference_number)
     if data and 'lab_result' in data:
         return data['lab_result']
-    return f"{reference_number} - Please enter your reference number in the message box above."
+    contact_number = "(123) 456-7899"
+    return f"{reference_number} - If you're newly registered, please call us at {contact_number}. If you're a verified patient, please enter your reference number in the message box above."
+
 
 def get_prescription(reference_number):
     data = reference_data.get(reference_number)
     if data and 'prescription' in data:
         return data['prescription']
-    return f"{reference_number} - Please enter your reference number in the message box above."
+    
+    contact_number = "(123) 456-7899"
+    return f"{reference_number} - If you're newly registered, please call us at {contact_number}. If you're a verified patient, please enter your reference number in the message box above."
+
 
 def get_billing(reference_number):
     data = reference_data.get(reference_number)
     if data and 'billing' in data:
         return data['billing']
-    return f"{reference_number} - Please enter your reference number in the message box above."
+    
+    contact_number = "(123) 456-7899"
+    return f"{reference_number} - If you're newly registered, please call us at {contact_number}. If you're a verified patient, please enter your reference number in the message box above."
+

@@ -22,8 +22,8 @@ class IntentRecognizer:
             'emergency': ['emergency', 'urgent'],
             'other': ['other', 'issue']
         }
-        self.client = MongoClient('mongodb://localhost:27017/AI-POWERED-CHATBOT')
-        self.db = self.client['hospital2']
+        self.client = MongoClient('mongodb://localhost:27017/')
+        self.db = self.client['aiPoweredHospitalChatbot']
         self.text_to_speech_client = texttospeech.TextToSpeechClient()
         self.response_map = {
             'doctors': self.get_doctors,
