@@ -22,7 +22,7 @@ class IntentRecognizer:
             'emergency': ['emergency', 'urgent'],
             'other': ['other', 'issue']
         }
-        self.client = MongoClient('mongodb://localhost:27017/')
+        self.client = MongoClient('mongodb+srv://allamudikalyanbabu56:SdaQMySMaSIQ0x1I@aichatbot.4ebgt.mongodb.net/?retryWrites=true&w=majority&appName=AIChatbot')
         self.db = self.client['aiPoweredHospitalChatbot']
         self.text_to_speech_client = texttospeech.TextToSpeechClient()
         self.response_map = {
